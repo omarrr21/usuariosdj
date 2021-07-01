@@ -49,7 +49,9 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-LOCAL_APPS=[]
+LOCAL_APPS=[
+    'applications.usuarios'
+]
 THIRD_PARTY_APPS=[]
 INSTALLED_APPS=DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -109,6 +111,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+#para hacerse con el control total del gestor de usuarios
+AUTH_USER_MODEL='usuarios.Usuario'
 
 
 # Internationalization
